@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+    <struts>
+    	<!-- 用户登录界面 -->
+    	<package name="login" namespace="/loginModel" extends="struts-default">
+    		<!-- 登录 -->
+    		<action name="failAction">
+    			<result name="success">/WEB-INF/Login.jsp</result>
+    		</action>
+    		
+    		<action name="LoginAction" method="queryAll" class="org.great.action.LoginAction">
+    			<result name="success">/WEB-INF/Fail.jsp</result>
+    			<result name="fail">/WEB-INF/Login.jsp</result>
+    		</action>
+    	</package>
+    </struts>
